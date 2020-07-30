@@ -1,34 +1,34 @@
-let Path = [
+let questions = [
     {
-      title: "Welcome to the quiz! Rules are simple, solve questions in as little time as possible! Good Luck!",
-      button: "Start Quiz"
+      title: "Welcome to Love Chemistery! A game where you can romance apprentice alchemist Ainz Hartman.To begin press start! You only have once chance.",
+      button: "Start Game!"
     }
     ,
     {
-      title: "What word is NOT a onomatopoeia?",
-      choices: ["Pow", "Bang", "Punch", "Thwack"],
-      answer: "Punch"
+      title: "Hello, How are you?",
+      choices: ["I am good, and you?", "I have only met you but I love you.", "What? Don't talk to me.", "You focking what mate?"],
+      answer: "I am good, and you?"
     }
     ,
     {
-      title: "Which of these animals do not belong?",
-      choices: ["Leopeard", "Lion", "Lama", "Linx"],
-      answer: "Lama"
+      title: "I see, what are your hobbies?",
+      choices: ["Getting you to date me.", "I play games/read and such!", "None of your buisness.", "Nothing you would know."],
+      answer: "I play games/read and such!"
     }
     ,
     {
-      title: "What does D&D stand for?",
-      choices: ["Donuts and Drinks", "Darkness and Daggers", "Dungeons and Dragons", "Drums and Didgeridoos"],
-      answer: "Dungeons and Dragons"
+      title: "Well, do you have any places you like to travel?",
+      choices: ["Dungeons.", "Your closet.", "The club of course!", "I spend time mostly inside but I go out."],
+      answer: "I spend time mostly inside but I go out."
     },
     {
-      title: "What is the correct spelling?",
-      choices: ["pneumonoultramicroscopicsilicovolcanoconiosis", "pneumonoulcanoconiosis", "pneumonoultorliopisoncanoconiosis", "pneumonoulwalteroilipcanoconiosis"],
-      answer: "pneumonoultramicroscopicsilicovolcanoconiosis"
+      title: "Okay, what kind of job do you have?",
+      choices: ["Dominatrix.", "Slave trader.", "I have a office job.", "I have no job."],
+      answer: "I have a office job."
     },
     {
-      title: "Which of these is was NOT a cartoon?",
-      choices: ["Digimon", "Regimon", "Pokemon", "Bakugan"],
-      answer: "Regimon"
+      title: "Hmmm, I am going to go now but thanks for the chat!",
+      choices: ["No problem!", "Come back here you hansome man!", "This isn't goodbye *pulls kife*", "Fine, leave. Weirdo."],
+      answer: "No problem!"
     }
   ]

@@ -1,4 +1,4 @@
-let timeEl = document.querySelector(".time");
+// let timeEl = document.querySelector(".time");
 
 let mainEl = document.getElementById("main");
 
@@ -18,26 +18,26 @@ let wrongAnswer = 0;
 
 let questionNum = 0;
 
-let secondsLeft = 76;
+// let secondsLeft = 76;
 
 var initialsEl = JSON.parse(localStorage.getItem("data"));
 
-function setTime() {
+// function setTime() {
 
-  var timerInterval = setInterval(function () {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left.";
+//   var timerInterval = setInterval(function () {
+//     secondsLeft--;
+//     timeEl.textContent = secondsLeft + " seconds left.";
 
-    if (secondsLeft <= 0 || questionNum >= questions.length - 1) {
-      clearInterval(timerInterval);
-      var newDiv = document.createElement("div");
-      newDiv.textContent = "Times up!";
-      timeEl.appendChild(newDiv);
-      ;
-    }
+//     if (secondsLeft <= 0 || questionNum >= questions.length - 1) {
+//       clearInterval(timerInterval);
+//       var newDiv = document.createElement("div");
+//       newDiv.textContent = "Times up!";
+//       timeEl.appendChild(newDiv);
+//       ;
+//     }
 
-  }, 1000);
-};
+//   }, 1000);
+// };
 
 $('.score').hide();
 
@@ -108,29 +108,38 @@ function result() {
   console.log(wrongAnswer);
   console.log(rightAnswer);
   $(`#buttons`).empty();
-  $(`#quest`).text(`Great Job! You got ${rightAnswer} right and ${wrongAnswer} wrong. If you want to try again refresh the page.`);
-  $('.score').show();
+  if (wrongAnswer > rightAnswer){
+    $(`#quest`).text(`Ainz will now advoid you. If you want to try again refresh the page.`);
+  };
+  if (rightAnswer > wrongAnswer){
+    $(`#quest`).text(`Ainz will now be friends with you. If you want to try again refresh the page.`);
+  }
+  else{
+    $(`#quest`).text(`Ainz is now your acquaintance. If you want to try again refresh the page.`); 
+  }
+  
+  // $('.score').show();
 }
 
-$('.score').append(`<textarea class= "scoreShow" placeholder="Initials"></textarea>`);
-$('.score').append(`<button class= "scoreBoard"> Submit </button>`);
+// $('.score').append(`<textarea class= "scoreShow" placeholder="Initials"></textarea>`);
+// $('.score').append(`<button class= "scoreBoard"> Submit </button>`);
 
-$(`.scoreBoard`).click(function () {
+// $(`.scoreBoard`).click(function () {
 
-  let initials = $(`.scoreShow`).val();
+//   let initials = $(`.scoreShow`).val();
 
-  console.log(initials);
-  const scorer = {
-    initials,
-    right: rightAnswer,
-    wrong: wrongAnswer,
-    timeLeft: secondsLeft,
-  }
+//   console.log(initials);
+//   const scorer = {
+//     initials,
+//     right: rightAnswer,
+//     wrong: wrongAnswer,
+//     timeLeft: secondsLeft,
+//   }
 
-  localStorage.setItem(`data`, JSON.stringify(scorer));
+//   localStorage.setItem(`data`, JSON.stringify(scorer));
 
-});
+// });
 
-$(`.highScore`).text(`High-Score: ${initialsEl.initials} ${initialsEl.right} correct, and ${initialsEl.wrong} inncorrect with ${initialsEl.timeLeft} seconds left.`);
+// $(`.highScore`).text(`High-Score: ${initialsEl.initials} ${initialsEl.right} correct, and ${initialsEl.wrong} inncorrect with ${initialsEl.timeLeft} seconds left.`);
 
-console.log(initialsEl.initials)
+// console.log(initialsEl.initials)
