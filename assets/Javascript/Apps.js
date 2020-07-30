@@ -118,8 +118,8 @@ function result() {
     $(`#quest`).text(`Ainz is now your acquaintance. If you want to try again refresh the page.`); 
   }
   
-  // $('.score').show();
 }
+// $('.score').show();
 
 // $('.score').append(`<textarea class= "scoreShow" placeholder="Initials"></textarea>`);
 // $('.score').append(`<button class= "scoreBoard"> Submit </button>`);
